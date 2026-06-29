@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — CyberGuard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+
+<div class="auth-screen">
+
+  <!-- LEFT: BRAND / VISUAL PANEL -->
+  <div class="auth-side">
+    <canvas id="matrixCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+    <div class="scan-line"></div>
+
+    <div class="auth-side-content">
+      <a href="index.html" class="logo">
+        <img src="logo (1).webp" alt="CyberGuard logo" class="site-logo">
+      </a>
+
+      <h2 class="auth-side-title">Securing systems<br>around the clock.</h2>
+      <p class="auth-side-text">Sign in to monitor live threats, manage incidents, and review your organization's security posture in real time.</p>
+
+      <img src="webp6.webp" alt="security visual" class="auth-side-image">
+
+      <div class="auth-side-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-count="250">0</span><span class="stat-suffix">+</span>
+          <p>Threats Blocked Daily</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="99">0</span><span class="stat-suffix">.9%</span>
+          <p>Uptime Guaranteed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: FORM PANEL -->
+  <div class="auth-form-panel">
+    <a href="index.html" class="logo auth-mobile-logo">
+      <img src="logo (1).webp" alt="CyberGuard logo" class="site-logo auth-mobile-logo-img">
+    </a>
+
+    <div class="auth-card reveal-up in-view">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> SECURE ACCESS</div>
+      <h1 class="auth-title">Welcome back</h1>
+      <p class="auth-sub">Enter your credentials to access the security console.</p>
+
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login">Sign In</button>
+        <button class="auth-tab" data-tab="2fa-info">2FA Info</button>
+      </div>
+
+      <form class="auth-form" id="loginForm">
+        <div class="form-field">
+          <label for="email">Work Email</label>
+          <div class="input-wrap">
+            <span class="input-icon">✉</span>
+            <input type="email" id="email" placeholder="you@company.com" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="password" placeholder="••••••••" required>
+            <button type="button" class="input-toggle" id="togglePassword">SHOW</button>
+          </div>
+          <div class="password-strength" id="passwordStrength">
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label class="checkbox-wrap">
+            <input type="checkbox">
+            <span class="checkbox-box"></span>
+            Remember this device
+          </label>
+          <a href="404error.html" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary full-width auth-submit" id="loginSubmit">
+          <span>Sign In Securely</span><i class="arrow">→</i>
+        </button>
+
+        <div class="auth-status" id="authStatus">
+          <span class="status-dot"></span> <span id="authStatusText">Validating credentials...</span>
+        </div>
+      </form>
+
+      <div class="auth-divider"><span>OR CONTINUE WITH</span></div>
+
+      <div class="auth-social">
+         <a href="404error.html"><button class="social-btn"><span class="social-icon">G</span> Google</button></a>
+        <a href="404error.html"><button class="social-btn"><span class="social-icon">⌘</span> SSO</button></a>
+      </div>
+
+      <p class="auth-footer-text">Don't have an account? <a href="#" id="openCreateAccount">Request access</a></p>
+    </div>
+
+    <p class="auth-legal">Protected by CyberGuard 256-bit encryption. <a href="#">Privacy Policy</a></p>
+  </div>
+  </div>
+
+
+<!-- Create Account Modal -->
+<div class="modal-backdrop" id="createAccountModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="createAccountTitle">
+    <button class="modal-close" id="closeCreateAccount" aria-label="Close modal">×</button>
+    <h2 id="createAccountTitle">Request Access — Create Account</h2>
+    <p class="modal-sub">Provide your details and we'll review your access request.</p>
+
+    <form id="createAccountForm" class="auth-form">
+      <div class="form-field">
+        <label for="createName">Full name</label>
+        <div class="input-wrap">
+          <input type="text" id="createName" placeholder="Jane Doe" required>
+        </div>
+        <div class="input-error" id="createNameError" aria-live="polite"></div>
+      </div>
+
+      <div class="form-field">
+        <label for="createEmail">Work email</label>
+        <div class="input-wrap">
+          <input type="email" id="createEmail" placeholder="you@company.com" required>
+        </div>
+        <div class="input-error" id="createEmailError" aria-live="polite"></div>
+      </div>
+
+      <div class="form-field">
+        <label for="createPassword">Password</label>
+        <div class="input-wrap">
+          <input type="password" id="createPassword" placeholder="Create a password" required>
+          <button type="button" class="input-toggle modal-toggle" id="createTogglePassword">SHOW</button>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="createPasswordConfirm">Confirm password</label>
+        <div class="input-wrap">
+          <input type="password" id="createPasswordConfirm" placeholder="Confirm password" required>
+          <button type="button" class="input-toggle modal-toggle" id="createToggleConfirm">SHOW</button>
+        </div>
+      </div>
+
+      <div class="form-row" style="justify-content:flex-end;">
+        <button type="button" class="btn btn-outline" id="cancelCreate">Cancel</button>
+        <button type="submit" class="btn btn-primary">Request Access</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

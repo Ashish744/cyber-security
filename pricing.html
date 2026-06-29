@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="logo (1).webp" alt="CyberGuard logo" class="site-logo">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="process.html" class="nav-link">Process</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="team.html" class="nav-link">Team</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="login.html" class="btn btn-outline header-btn">Get Protected</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+    
+<!-- ===== PRICING ===== -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <div class="eyebrow center"><span class="eyebrow-dot"></span> PRICING PLANS</div>
+      <h2 class="section-title center">Choose Your <span class="text-accent">Protection</span> Level</h2>
+      <p class="section-text center">Transparent pricing with no hidden fees. Cancel or upgrade anytime.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card reveal-up">
+        <h3>Essential</h3>
+        <p class="price-desc">For small teams getting started with security</p>
+        <div class="price"><span class="currency">$</span>299<span class="period">/mo</span></div>
+        <ul class="price-features">
+          <li>✓ Basic threat monitoring</li>
+          <li>✓ Monthly vulnerability scan</li>
+          <li>✓ Email support</li>
+          <li>✓ 1 user dashboard</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline full-width">Get Started</a>
+      </div>
+
+      <div class="price-card featured reveal-up" style="--delay:0.1s">
+        <span class="price-tag">MOST POPULAR</span>
+        <h3>Professional</h3>
+        <p class="price-desc">For growing businesses needing full coverage</p>
+        <div class="price"><span class="currency">$</span>699<span class="period">/mo</span></div>
+        <ul class="price-features">
+          <li>✓ Real-time threat detection</li>
+          <li>✓ Weekly penetration testing</li>
+          <li>✓ 24/7 priority support</li>
+          <li>✓ 10 user dashboards</li>
+          <li>✓ Incident response team</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary full-width"><span>Get Started</span><i class="arrow">→</i></a>
+      </div>
+
+      <div class="price-card reveal-up" style="--delay:0.2s">
+        <h3>Enterprise</h3>
+        <p class="price-desc">For large organizations with complex needs</p>
+        <div class="price"><span class="currency">$</span>1499<span class="period">/mo</span></div>
+        <ul class="price-features">
+          <li>✓ Custom security architecture</li>
+          <li>✓ Dedicated SOC team</li>
+          <li>✓ Unlimited dashboards</li>
+          <li>✓ SLA-backed guarantees</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline full-width">Contact Sales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <div class="eyebrow center"><span class="eyebrow-dot"></span> INCLUDED WITH EVERY PLAN</div>
+      <h2 class="section-title center">Every engagement includes the essentials for <span class="text-accent">steady protection</span></h2>
+      <p class="section-text center">You get practical security coverage from day one, without the complexity of managing dozens of point tools.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal-up">
+        <div class="service-icon"><span>🧾</span></div>
+        <h3>Risk Review</h3>
+        <p>We provide a prioritized view of your current security posture and the most urgent gaps.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.1s">
+        <div class="service-icon"><span>📧</span></div>
+        <h3>Support Access</h3>
+        <p>Reach our specialists whenever an incident, question, or urgent change needs attention.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.2s">
+        <div class="service-icon"><span>🛡</span></div>
+        <h3>Security Guidance</h3>
+        <p>Recommendations are tailored to your team structure and the systems you already rely on.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.3s">
+        <div class="service-icon"><span>🔐</span></div>
+        <h3>Continuous Improvement</h3>
+        <p>We keep adapting your protection as your business grows, evolves, and faces new threats.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+
+  <!-- top strip: status + newsletter -->
+  <div class="footer-top">
+    <div class="container footer-top-inner">
+      <div class="footer-status">
+        <span class="status-dot"></span>
+        <span class="status-text">ALL SYSTEMS OPERATIONAL</span>
+        <span class="status-sep">/</span>
+        <span class="status-time" id="footerClock">--:--:-- UTC</span>
+      </div>
+
+      <form class="footer-newsletter" id="newsletterForm">
+        <span class="newsletter-label">Get threat alerts in your inbox</span>
+        <div class="newsletter-input-wrap">
+          <input id="newsletterEmail" type="email" placeholder="you@company.com" required>
+          <button type="submit" class="btn btn-primary"><span>Subscribe</span><i class="arrow">→</i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-grid">
+
+    <div class="footer-col footer-brand">
+      <a href="#home" class="logo">
+        <img src="logo (1).webp" alt="CyberGuard logo" class="site-logo footer-logo">
+      </a>
+      <p>Proactive cyber defense for businesses that can't afford to be vulnerable. Monitored around the clock, every day of the year.</p>
+
+      <div class="footer-contact-cards">
+        <a href="tel:+18005550142" class="footer-contact-card">
+          <span class="fcc-icon">☎</span>
+          <span><small>Call Us</small><strong>+1 (800) 555‑0142</strong></span>
+        </a>
+        <a href="mailto:contact@cyberguard.com" class="footer-contact-card">
+          <span class="fcc-icon">✉</span>
+          <span><small>Email Us</small><strong>contact@cyberguard.com</strong></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Company <span class="col-bracket">]</span></h4>
+      <ul>
+        <li><a href="about.html"><i class="link-arrow">›</i> About Us</a></li>
+        <li><a href="team.html"><i class="link-arrow">›</i> Our Team</a></li>
+        <li><a href="blog.html"><i class="link-arrow">›</i> Blog</a></li>
+        <li><a href="careers.html"><i class="link-arrow">›</i> Careers</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Services <span class="col-bracket">]</span></h4>
+      <ul>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Threat Detection</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Penetration Testing</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Cloud Security</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Incident Response</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Live Scan <span class="col-bracket">]</span></h4>
+      <div class="terminal-window footer-terminal">
+        <div class="terminal-bar">
+          <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+          <span class="terminal-title">live_scan.sh</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> <span id="heroTerminalLine">Scanning endpoint activity...</span><span class="cursor">_</span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 CyberGuard. All rights reserved.</p>
+      <div class="footer-links"><a href="404error.html">Privacy Policy</a><a href="404error.html">Terms of Service</a><a href="404error.html">Security Disclosure</a></div>
+      <div class="footer-socials">
+        <a href="404error.html">in</a><a href="404error.html">𝕏</a><a href="404error.html">f</a><a href="404error.html">@</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberGuard — Cyber Security Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== PRELOADER ===== -->
+<div class="preloader" id="preloader">
+  <div class="preloader-grid"></div>
+  <div class="preloader-text">Stackly-Cyber<span class="dots">...</span></div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#home" class="logo">
+      <img src="logo (1).webp" alt="CyberGuard logo" class="site-logo">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="process.html" class="nav-link">Process</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="team.html" class="nav-link">Team</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="login.html" class="btn btn-outline header-btn">Get Protected</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <canvas id="matrixCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+    <div class="scan-line"></div>
+  </div>
+
+  <div class="container hero-inner hero-inner-centered">
+    <div class="hero-text hero-text-centered">
+
+      <div class="eyebrow center reveal-up in-view">
+        <span class="eyebrow-dot"></span> THREAT PROTECTION REDEFINED
+      </div>
+
+      <h1 class="hero-title hero-title-animated hero-title-centered" id="heroTitle" aria-label="Securing Your Digital World, One Layer at a Time">
+        <span class="title-line">
+          <span class="word">Securing</span> <span class="word">Your</span> <span class="word glitch" data-text="Digital">Digital</span>
+        </span>
+        <span class="title-line">
+          <span class="word">World,</span> <span class="word text-accent">One</span> <span class="word text-accent">Layer</span> <span class="word">at</span> <span class="word">a</span> <span class="word">Time</span>
+        </span>
+      </h1>
+
+      <p class="hero-sub hero-sub-centered reveal-up in-view" style="--delay:0.7s">
+        We detect, defend, and neutralize cyber threats before they reach you — combining
+        AI-driven monitoring with elite human expertise to keep your business one step ahead of attackers.
+      </p>
+
+      <div class="hero-typewriter hero-typewriter-centered reveal-up in-view" style="--delay:0.85s">
+        <span class="typewriter-label">Defending you against:</span>
+        <span class="typewriter-text"><span id="typewriterWord">Ransomware</span><span class="typewriter-cursor">|</span></span>
+      </div>
+
+      <div class="hero-cta hero-cta-centered reveal-up in-view" style="--delay:1s">
+        <a href="login.html" class="btn btn-primary">
+          <span>Request a Security Audit</span>
+          <i class="arrow">→</i>
+        </a>
+        <a href="about.html" class="btn btn-ghost">
+          <span class="play-icon">▶</span> Watch Overview
+        </a>
+      </div>
+
+      <div class="hero-stats hero-stats-centered reveal-up in-view" style="--delay:1.15s">
+        <div class="stat-item">
+          <span class="stat-num" data-count="250">0</span><span class="stat-suffix">+</span>
+          <p>Threats Blocked Daily</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="99">0</span><span class="stat-suffix">.9%</span>
+          <p>Uptime Guaranteed</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-count="14">0</span><span class="stat-suffix">+</span>
+          <p>Years Experience</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hero-marquee">
+    <div class="marquee-track">
+      <span>THREAT DETECTION</span><span>•</span><span>PENETRATION TESTING</span><span>•</span>
+      <span>CLOUD SECURITY</span><span>•</span><span>INCIDENT RESPONSE</span><span>•</span>
+      <span>RISK ASSESSMENT</span><span>•</span><span>24/7 MONITORING</span><span>•</span>
+      <span>THREAT DETECTION</span><span>•</span><span>PENETRATION TESTING</span><span>•</span>
+      <span>CLOUD SECURITY</span><span>•</span><span>INCIDENT RESPONSE</span><span>•</span>
+      <span>RISK ASSESSMENT</span><span>•</span><span>24/7 MONITORING</span><span>•</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUSTED BY ===== -->
+<!-- <section class="trusted">
+  <div class="container">
+    <p class="trusted-label">TRUSTED BY SECURITY-FIRST TEAMS AROUND THE WORLD</p>
+    <div class="trusted-logos">
+      <img src="webp1.webp" alt="Trusted logo 1" class="trusted-logo">
+      <img src="webp2.webp" alt="Trusted logo 2" class="trusted-logo">
+      <img src="webp3.webp" alt="Trusted logo 3" class="trusted-logo">
+      <img src="webp4.webp" alt="Trusted logo 4" class="trusted-logo">
+      <img src="webp5.webp" alt="Trusted logo 5" class="trusted-logo">
+    </div>
+  </div>
+</section> -->
+
+
+
+<!-- ===== STATS BANNER ===== -->
+<section class="stats-banner">
+  <div class="stats-bg">
+    <img src="webp5.webp" alt="Stats background" class="stats-bg-image">
+  </div>
+  <div class="container stats-banner-grid">
+    <div class="stat-block reveal-up">
+      <span class="stat-num" data-count="98">0</span><span class="stat-suffix">%</span>
+      <p>Client Retention Rate</p>
+    </div>
+    <div class="stat-block reveal-up" style="--delay:0.1s">
+      <span class="stat-num" data-count="3200">0</span><span class="stat-suffix">+</span>
+      <p>Vulnerabilities Patched</p>
+    </div>
+    <div class="stat-block reveal-up" style="--delay:0.2s">
+      <span class="stat-num" data-count="48">0</span><span class="stat-suffix">+</span>
+      <p>Countries Served</p>
+    </div>
+    <div class="stat-block reveal-up" style="--delay:0.3s">
+      <span class="stat-num" data-count="120">0</span><span class="stat-suffix">+</span>
+      <p>In-House Experts</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="why-us">
+  <div class="container why-grid">
+    <div class="why-visual reveal-left">
+      <img src="webp5.webp" alt="why choose us visual" class="why-image">
+    </div>
+    <div class="why-content reveal-right">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> WHY CHOOSE US</div>
+      <h2 class="section-title">Defense Built on <span class="text-accent">Trust</span> &amp; Expertise</h2>
+
+      <div class="accordion" id="accordion">
+        <div class="accordion-item active">
+          <button class="accordion-head">
+            <span>Industry-Leading Expertise</span><span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>Our analysts hold top certifications (CISSP, OSCP, CEH) and bring decades of combined frontline experience.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-head">
+            <span>Rapid Incident Response</span><span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>Average detection-to-containment time under 15 minutes, minimizing impact when seconds matter.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-head">
+            <span>Transparent Reporting</span><span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>Clear, jargon-free dashboards and reports so your team always knows exactly where you stand.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-head">
+            <span>Scalable for Any Business</span><span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <p>From startups to global enterprises, our solutions scale precisely with your needs and budget.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="services">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <div class="eyebrow center"><span class="eyebrow-dot"></span> OPERATIONAL READINESS</div>
+      <h2 class="section-title center">Prepared for threats, audits, and <span class="text-accent">growth</span></h2>
+      <p class="section-text center">We help businesses stay resilient through incident preparation, compliance support, and ongoing defense optimization.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal-up">
+        <div class="service-icon"><span>🧪</span></div>
+        <h3>Tabletop Exercises</h3>
+        <p>We conduct realistic response drills so teams know exactly what to do under pressure.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.1s">
+        <div class="service-icon"><span>📋</span></div>
+        <h3>Compliance Support</h3>
+        <p>From audits to policy alignment, we make regulatory readiness less stressful and more actionable.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.2s">
+        <div class="service-icon"><span>🧭</span></div>
+        <h3>Strategic Planning</h3>
+        <p>We build long-term cyber roadmaps that scale with your team, systems, and market demands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <div class="eyebrow center"><span class="eyebrow-dot"></span> EXPANDED DEFENSE LAYERS</div>
+      <h2 class="section-title center">Additional capabilities designed for <span class="text-accent">modern risk</span></h2>
+      <p class="section-text center">Each layer strengthens your security posture with targeted protection, visibility, and response.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal-up">
+        <img src="webp8.webp" alt="Adaptive Endpoint Defense" style="height:220px; width:100%; object-fit:cover; border-radius:16px; margin-bottom:18px;">
+        <h3>Adaptive Endpoint Defense</h3>
+        <p>Secure laptops, servers, and mobile devices with continuous monitoring and rapid containment of suspicious behavior.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.1s">
+        <img src="webp9.webp" alt="Cloud Security Posture" style="height:220px; width:100%; object-fit:cover; border-radius:16px; margin-bottom:18px;">
+        <h3>Cloud Security Posture</h3>
+        <p>Reduce exposure across AWS, Azure, and hybrid environments with configuration checks and continuous visibility.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.2s">
+        <img src="webp10.webp" alt="Identity & Access Control" style="height:220px; width:100%; object-fit:cover; border-radius:16px; margin-bottom:18px;">
+        <h3>Identity & Access Control</h3>
+        <p>Protect privileged accounts and enforce least-privilege access with identity-based security controls.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.3s">
+         <img src="webp11.webp" alt="Security Awareness Training" style="height:220px; width:100%; object-fit:cover; border-radius:16px; margin-bottom:18px;">
+
+         <h3>Security Awareness Training</h3>
+        <p>Turn employees into the first line of defense with realistic phishing simulations and practical learning.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.4s">
+        <img src="webp12.webp" alt="24/7 Threat Response" style="height:220px; width:100%; object-fit:cover; border-radius:16px; margin-bottom:18px;">
+        <h3>24/7 Threat Response</h3>
+        <p>Keep your business protected around the clock with a dedicated team ready to investigate and respond quickly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+
+  <!-- top strip: status + newsletter -->
+  <div class="footer-top">
+    <div class="container footer-top-inner">
+      <div class="footer-status">
+        <span class="status-dot"></span>
+        <span class="status-text">ALL SYSTEMS OPERATIONAL</span>
+        <span class="status-sep">/</span>
+        <span class="status-time" id="footerClock">--:--:-- UTC</span>
+      </div>
+
+      <form class="footer-newsletter" id="newsletterForm">
+        <span class="newsletter-label">Get threat alerts in your inbox</span>
+        <div class="newsletter-input-wrap">
+          <input id="newsletterEmail" type="email" placeholder="you@company.com" required>
+          <button type="submit" class="btn btn-primary"><span>Subscribe</span><i class="arrow">→</i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-grid">
+
+    <div class="footer-col footer-brand">
+      <a href="#home" class="logo">
+        <img src="logo (1).webp" alt="CyberGuard logo" class="site-logo footer-logo">
+      </a>
+      <p>Proactive cyber defense for businesses that can't afford to be vulnerable. Monitored around the clock, every day of the year.</p>
+
+      <div class="footer-contact-cards">
+        <a href="tel:+18005550142" class="footer-contact-card">
+          <span class="fcc-icon">☎</span>
+          <span><small>Call Us</small><strong>+1 (800) 555‑0142</strong></span>
+        </a>
+        <a href="mailto:contact@cyberguard.com" class="footer-contact-card">
+          <span class="fcc-icon">✉</span>
+          <span><small>Email Us</small><strong>contact@cyberguard.com</strong></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Company <span class="col-bracket">]</span></h4>
+      <ul>
+        <li><a href="about.html"><i class="link-arrow">›</i> About Us</a></li>
+        <li><a href="team.html"><i class="link-arrow">›</i> Our Team</a></li>
+        <li><a href="blog.html"><i class="link-arrow">›</i> Blog</a></li>
+        <li><a href="careers.html"><i class="link-arrow">›</i> Careers</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Services <span class="col-bracket">]</span></h4>
+      <ul>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Threat Detection</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Penetration Testing</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Cloud Security</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Incident Response</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Live Scan <span class="col-bracket">]</span></h4>
+      <div class="terminal-window footer-terminal">
+        <div class="terminal-bar">
+          <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+          <span class="terminal-title">live_scan.sh</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> <span id="heroTerminalLine">Scanning endpoint activity...</span><span class="cursor">_</span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 CyberGuard. All rights reserved.</p>
+      <div class="footer-links"><a href="404error.html">Privacy Policy</a><a href="404error.html">Terms of Service</a><a href="404error.html">Security Disclosure</a></div>
+      <div class="footer-socials">
+        <a href="404error.html">in</a><a href="404error.html">𝕏</a><a href="404error.html">f</a><a href="404error.html">@</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

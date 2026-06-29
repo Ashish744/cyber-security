@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="logo (1).webp" alt="CyberGuard logo" class="site-logo">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="process.html" class="nav-link">Process</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="team.html" class="nav-link">Team</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="login.html" class="btn btn-outline header-btn">Get Protected</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-visual reveal-left">
+      <img src="webp8.webp" alt="About visual" class="about-image">
+      <div class="about-badge">
+        <span class="badge-num">14+</span>
+        <span class="badge-label">Years of<br>Cyber Defense</span>
+      </div>
+      <div class="about-image-deco"></div>
+    </div>
+
+    <div class="about-content reveal-right">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> WHO WE ARE</div>
+      <h2 class="section-title">Proactive Defense for an <span class="text-accent">Unpredictable</span> Threat Landscape</h2>
+      <p class="section-text">
+        CyberGuard unites threat intelligence, ethical hacking, and round-the-clock monitoring into a single,
+        relentless defense system. We don't just respond to attacks — we anticipate them, closing gaps before
+        adversaries ever find them.
+      </p>
+
+      <ul class="check-list">
+        <li><span class="check-icon">✓</span> Certified ethical hackers & analysts</li>
+        <li><span class="check-icon">✓</span> Real-time global threat intelligence</li>
+        <li><span class="check-icon">✓</span> 24/7/365 security operations center</li>
+        <li><span class="check-icon">✓</span> Compliance-ready reporting (ISO, SOC2, GDPR)</li>
+      </ul>
+
+      <div class="about-cta">
+        <a href=" 404error.html" class="btn btn-primary"><span>Explore Our Services</span><i class="arrow">→</i></a>
+        <div class="about-contact">
+          <span class="contact-icon">☎</span>
+          <div>
+            <small>Talk to a Specialist</small>
+            <strong>+1 (800) 555‑0142</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="container">
+    <div class="section-head reveal-up">
+      <div class="eyebrow center"><span class="eyebrow-dot"></span> OUR PROMISE</div>
+      <h2 class="section-title center">Security leadership with <span class="text-accent">integrity</span> and measurable impact</h2>
+      <p class="section-text center">We blend deep technical expertise with transparent communication so your team can act with confidence.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal-up">
+        <div class="service-icon"><span>⚖</span></div>
+        <h3>Honest Guidance</h3>
+        <p>We recommend solutions that match your maturity level, budget, and business priorities.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.1s">
+        <div class="service-icon"><span>⚡</span></div>
+        <h3>Focused Speed</h3>
+        <p>Critical alerts are triaged fast so your team can contain problems without delay.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.2s">
+        <div class="service-icon"><span>🧭</span></div>
+        <h3>Clear Direction</h3>
+        <p>Every engagement ends with a practical roadmap that reduces confusion and accelerates change.</p>
+      </div>
+      <div class="service-card reveal-up" style="--delay:0.3s">
+        <div class="service-icon"><span>🌍</span></div>
+        <h3>Global Reach</h3>
+        <p>Our analysts and response teams support organizations across regions and regulatory environments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+
+  <!-- top strip: status + newsletter -->
+  <div class="footer-top">
+    <div class="container footer-top-inner">
+      <div class="footer-status">
+        <span class="status-dot"></span>
+        <span class="status-text">ALL SYSTEMS OPERATIONAL</span>
+        <span class="status-sep">/</span>
+        <span class="status-time" id="footerClock">--:--:-- UTC</span>
+      </div>
+
+      <form class="footer-newsletter" id="newsletterForm">
+        <span class="newsletter-label">Get threat alerts in your inbox</span>
+        <div class="newsletter-input-wrap">
+          <input id="newsletterEmail" type="email" placeholder="you@company.com" required>
+          <button type="submit" class="btn btn-primary"><span>Subscribe</span><i class="arrow">→</i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-grid">
+
+    <div class="footer-col footer-brand">
+      <a href="#home" class="logo">
+        <img src="logo (1).webp" alt="CyberGuard logo" class="site-logo footer-logo">
+      </a>
+      <p>Proactive cyber defense for businesses that can't afford to be vulnerable. Monitored around the clock, every day of the year.</p>
+
+      <div class="footer-contact-cards">
+        <a href="tel:+18005550142" class="footer-contact-card">
+          <span class="fcc-icon">☎</span>
+          <span><small>Call Us</small><strong>+1 (800) 555‑0142</strong></span>
+        </a>
+        <a href="mailto:contact@cyberguard.com" class="footer-contact-card">
+          <span class="fcc-icon">✉</span>
+          <span><small>Email Us</small><strong>contact@cyberguard.com</strong></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Company <span class="col-bracket">]</span></h4>
+      <ul>
+        <li><a href="about.html"><i class="link-arrow">›</i> About Us</a></li>
+        <li><a href="team.html"><i class="link-arrow">›</i> Our Team</a></li>
+        <li><a href="blog.html"><i class="link-arrow">›</i> Blog</a></li>
+        <li><a href="careers.html"><i class="link-arrow">›</i> Careers</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Services <span class="col-bracket">]</span></h4>
+      <ul>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Threat Detection</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Penetration Testing</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Cloud Security</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Incident Response</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Live Scan <span class="col-bracket">]</span></h4>
+      <div class="terminal-window footer-terminal">
+        <div class="terminal-bar">
+          <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+          <span class="terminal-title">live_scan.sh</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> <span id="heroTerminalLine">Scanning endpoint activity...</span><span class="cursor">_</span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 CyberGuard. All rights reserved.</p>
+      <div class="footer-links"><a href="404error.html">Privacy Policy</a><a href="404error.html">Terms of Service</a><a href="404error.html">Security Disclosure</a></div>
+      <div class="footer-socials">
+        <a href="404error.html">in</a><a href="404error.html">𝕏</a><a href="404error.html">f</a><a href="404error.html">@</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

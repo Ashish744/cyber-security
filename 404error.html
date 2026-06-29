@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Access Denied | CyberGuard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="error-body">
+
+<canvas id="matrixCanvas" class="error-canvas"></canvas>
+<div class="hero-grid-overlay"></div>
+<div class="scan-line"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="logo (1).webp" alt="CyberGuard logo" class="site-logo">
+    </a>
+    <a href="index.html" class="btn btn-outline header-btn">Back to Home</a>
+  </div>
+</header>
+
+<section class="error-section">
+  <div class="container error-content">
+
+    <div class="error-tag reveal-up in-view"><span class="eyebrow-dot"></span> ERROR CODE: 0x404_NOT_FOUND</div>
+
+    <h1 class="error-code reveal-up in-view">
+      <span class="glitch" data-text="404">404</span>
+    </h1>
+
+    <h2 class="error-heading reveal-up in-view">Access <span class="text-accent">Denied</span></h2>
+    <p class="error-text reveal-up in-view">
+      The page you're looking for has been moved, deleted, or never existed —
+      our system flagged this request and logged it for review.
+    </p>
+
+    <div class="terminal-window reveal-up in-view">
+      <div class="terminal-bar">
+        <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+        <span class="terminal-title">cyberguard@security:~</span>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <p><span class="prompt">$</span> scanning requested path...</p>
+        <p><span class="prompt">$</span> route <span class="t-danger">not found</span></p>
+        <p><span class="prompt">$</span> <span class="t-typing" id="typingLine"></span><span class="cursor">_</span></p>
+      </div>
+    </div>
+
+    <div class="error-cta">
+      <a href="index.html" class="btn btn-primary"><span>Return to Safety</span><i class="arrow">→</i></a>
+      <a href="#" class="btn btn-ghost" onclick="window.history.back(); return false;">
+        <span class="play-icon">←</span> Go Back
+      </a>
+    </div>
+
+    <div class="error-search">
+      <span class="input-icon">🔍</span>
+      <input type="text" placeholder="Search for a page or service...">
+      <button class="btn btn-outline">Search</button>
+    </div>
+  </div>
+</section>
+
+<footer class="error-footer">
+  <p>© 2026 CyberGuard. All rights reserved. — If you believe this is a security issue, <a href="index.html#contact">report it</a>.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
