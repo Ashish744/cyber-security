@@ -352,6 +352,50 @@ if (ctaForm) {
 }
 
 // ===========================
+// FOOTER NEWSLETTER — site-wide validation for email inputs
+// ===========================
+(function() {
+  const forms = document.querySelectorAll('.footer-newsletter');
+  if (!forms || forms.length === 0) return;
+  const simpleEmailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  forms.forEach(form => {
+    const email = form.querySelector('input[type="email"]');
+    if (!email) return;
+
+    // Create or find an inline error element
+    let err = form.querySelector('.newsletter-error');
+    if (!err) {
+      err = document.createElement('div');
+      err.className = 'input-error newsletter-error';
+      err.style.marginTop = '8px';
+      err.style.minHeight = '18px';
+      form.appendChild(err);
+    }
+
+    email.addEventListener('input', () => { err.textContent = ''; err.classList.remove('show'); });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      err.textContent = '';
+
+      const val = email.value.trim();
+      if (!val || !simpleEmailRe.test(val)) {
+        err.textContent = 'Please enter a valid email address.';
+        if (email) email.focus();
+        return;
+      }
+
+      // Success — reset form and show temporary success message
+      form.reset();
+      err.textContent = 'Subscribed — thank you!';
+      err.classList.add('show');
+      setTimeout(() => { err.textContent = ''; err.classList.remove('show'); }, 4000);
+    });
+  });
+})();
+
+// ===========================
 // MATRIX / CYBER RAIN CANVAS BACKGROUND
 // ===========================
 const canvas = document.getElementById('matrixCanvas');
