@@ -39,6 +39,8 @@ const createToggle = document.getElementById('createTogglePassword');
 const createToggleConfirm = document.getElementById('createToggleConfirm');
 const createNameError = document.getElementById('createNameError');
 const createEmailError = document.getElementById('createEmailError');
+const createPasswordError = document.getElementById('createPasswordError');
+const createConfirmError = document.getElementById('createPasswordConfirmError');
 
 function openModal() {
   if (!createModal) return;
@@ -100,6 +102,63 @@ if (createName && createNameError) {
 if (createEmail && createEmailError) {
   createEmail.addEventListener('input', () => { createEmailError.textContent = ''; });
 }
+function validateCreatePassword() {
+  if (!createPassword || !createPasswordError) return true;
+
+  const pw = createPassword.value;
+  if (!pw) {
+    createPasswordError.textContent = 'Please enter a password.';
+    createPassword.setCustomValidity('Please enter a password.');
+    return false;
+  }
+
+  if (pw.length < 8) {
+    createPasswordError.textContent = 'Password must be at least 8 characters.';
+    createPassword.setCustomValidity('Password must be at least 8 characters.');
+    return false;
+  }
+
+  createPasswordError.textContent = '';
+  createPassword.setCustomValidity('');
+  return true;
+}
+
+function validateCreateConfirm() {
+  if (!createConfirm || !createConfirmError) return true;
+
+  const pw = createPassword ? createPassword.value : '';
+  const pwc = createConfirm.value;
+  if (!pwc) {
+    createConfirmError.textContent = 'Please confirm your password.';
+    createConfirm.setCustomValidity('Please confirm your password.');
+    return false;
+  }
+
+  if (pw !== pwc) {
+    createConfirmError.textContent = 'Passwords do not match.';
+    createConfirm.setCustomValidity('Passwords do not match.');
+    return false;
+  }
+
+  createConfirmError.textContent = '';
+  createConfirm.setCustomValidity('');
+  return true;
+}
+
+if (createPassword && createPasswordError) {
+  createPassword.addEventListener('input', () => {
+    createPasswordError.textContent = '';
+    createPassword.setCustomValidity('');
+  });
+  createPassword.addEventListener('blur', validateCreatePassword);
+}
+if (createConfirm && createConfirmError) {
+  createConfirm.addEventListener('input', () => {
+    createConfirmError.textContent = '';
+    createConfirm.setCustomValidity('');
+  });
+  createConfirm.addEventListener('blur', validateCreateConfirm);
+}
 
 if (createForm) {
   createForm.addEventListener('submit', (e) => {
@@ -108,6 +167,8 @@ if (createForm) {
     // Clear previous inline errors
     if (createNameError) createNameError.textContent = '';
     if (createEmailError) createEmailError.textContent = '';
+    if (createPasswordError) createPasswordError.textContent = '';
+    if (createConfirmError) createConfirmError.textContent = '';
 
     // Validate name (letters, spaces, hyphen, apostrophe)
     const nameVal = createName ? createName.value.trim() : '';
@@ -127,23 +188,13 @@ if (createForm) {
       return;
     }
 
-    const pw = createPassword ? createPassword.value : '';
-    const pwc = createConfirm ? createConfirm.value : '';
-    if (pw.length < 8) {
-      if (createPassword) {
-        createPassword.setCustomValidity('Password must be at least 8 characters.');
-        createPassword.reportValidity();
-        createPassword.setCustomValidity('');
-      }
+    if (!validateCreatePassword()) {
+      if (createPassword) createPassword.focus();
       return;
     }
 
-    if (pw !== pwc) {
-      if (createConfirm) {
-        createConfirm.setCustomValidity('Passwords do not match.');
-        createConfirm.reportValidity();
-        createConfirm.setCustomValidity('');
-      }
+    if (!validateCreateConfirm()) {
+      if (createConfirm) createConfirm.focus();
       return;
     }
 
@@ -151,6 +202,86 @@ if (createForm) {
     if (createForm) createForm.reset();
     closeModal();
     alert('Access request submitted. We will review and contact you.');
+  });
+}
+
+const loginForm = document.getElementById('loginForm');
+const loginEmail = document.getElementById('email');
+const loginPassword = document.getElementById('password');
+const loginEmailError = document.getElementById('loginEmailError');
+const loginPasswordError = document.getElementById('loginPasswordError');
+const authStatusText = document.getElementById('authStatusText');
+
+const emailValidationRule = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function validateLoginEmail() {
+  if (!loginEmail || !loginEmailError) return true;
+
+  const value = loginEmail.value.trim();
+  if (!value) {
+    loginEmailError.textContent = 'Please enter your work email.';
+    loginEmail.setAttribute('aria-invalid', 'true');
+    loginEmail.setCustomValidity('Please enter your work email.');
+    return false;
+  }
+
+  if (!emailValidationRule.test(value)) {
+    loginEmailError.textContent = 'Please enter a valid work email.';
+    loginEmail.setAttribute('aria-invalid', 'true');
+    loginEmail.setCustomValidity('Please enter a valid work email.');
+    return false;
+  }
+
+  loginEmailError.textContent = '';
+  loginEmail.setAttribute('aria-invalid', 'false');
+  loginEmail.setCustomValidity('');
+  return true;
+}
+
+if (loginEmail && loginEmailError) {
+  loginEmail.addEventListener('input', () => {
+    loginEmailError.textContent = '';
+    loginEmail.setAttribute('aria-invalid', 'false');
+    loginEmail.setCustomValidity('');
+    if (authStatusText) authStatusText.textContent = 'Validating credentials...';
+  });
+
+  loginEmail.addEventListener('blur', validateLoginEmail);
+}
+if (loginPassword && loginPasswordError) {
+  loginPassword.addEventListener('input', () => {
+    loginPasswordError.textContent = '';
+    if (authStatusText) authStatusText.textContent = 'Validating credentials...';
+  });
+}
+
+if (loginForm) {
+  loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (loginEmailError) loginEmailError.textContent = '';
+    if (loginPasswordError) loginPasswordError.textContent = '';
+    if (authStatusText) authStatusText.textContent = 'Validating credentials...';
+    if (loginEmail) loginEmail.setAttribute('aria-invalid', 'false');
+
+    const emailVal = loginEmail ? loginEmail.value.trim() : '';
+    const passwordVal = loginPassword ? loginPassword.value : '';
+
+    if (!validateLoginEmail()) {
+      if (loginEmail) loginEmail.focus();
+      if (authStatusText) authStatusText.textContent = 'Invalid email address.';
+      return;
+    }
+
+    if (!passwordVal || passwordVal.length < 8) {
+      if (loginPasswordError) loginPasswordError.textContent = 'Password must be at least 8 characters.';
+      if (loginPassword) loginPassword.focus();
+      if (authStatusText) authStatusText.textContent = 'Invalid password.';
+      return;
+    }
+
+    if (authStatusText) authStatusText.textContent = 'Signing in...';
+    window.location.href = 'dashboard.html';
   });
 }
 
@@ -599,48 +730,3 @@ if (heroVisual && window.matchMedia('(min-width: 901px)').matches) {
 // Initial nav state
 updateActiveNav();
 
-// ===========================
-// LOGIN: email validation + password toggle
-// ===========================
-const togglePassword = document.getElementById('togglePassword');
-const passwordInput = document.getElementById('password');
-const loginForm = document.getElementById('loginForm');
-const emailInput = document.getElementById('email');
-const authStatusText = document.getElementById('authStatusText');
-
-if (togglePassword && passwordInput) {
-  togglePassword.addEventListener('click', () => {
-    const isHidden = passwordInput.type === 'password';
-    passwordInput.type = isHidden ? 'text' : 'password';
-    togglePassword.textContent = isHidden ? 'HIDE' : 'SHOW';
-    togglePassword.setAttribute('aria-pressed', String(isHidden));
-  });
-}
-
-if (loginForm && emailInput) {
-  loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    // Use browser's built-in validity first
-    if (!emailInput.checkValidity()) {
-      emailInput.reportValidity();
-      return;
-    }
-
-    // Simple email regex as a secondary guard (optional)
-    const emailVal = emailInput.value.trim();
-    const simpleEmailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!simpleEmailRe.test(emailVal)) {
-      emailInput.setCustomValidity('Please enter a valid work email.');
-      emailInput.reportValidity();
-      emailInput.setCustomValidity('');
-      return;
-    }
-
-    // Show validating status briefly (demo placeholder for real auth)
-    if (authStatusText) authStatusText.textContent = 'Validating credentials...';
-    setTimeout(() => {
-      if (authStatusText) authStatusText.textContent = 'Ready.';
-    }, 900);
-  });
-}

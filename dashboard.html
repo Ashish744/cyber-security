@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — CyberGuard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== PRELOADER ===== -->
+<div class="preloader" id="preloader">
+  <div class="preloader-grid"></div>
+  <div class="preloader-text">CyberGuard Dashboard<span class="dots">...</span></div>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="logo (1).webp" alt="CyberGuard logo" class="site-logo">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="process.html" class="nav-link">Process</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="team.html" class="nav-link">Team</a></li>
+        <li><a href="reviews.html" class="nav-link">Reviews</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="login.html" class="btn btn-outline header-btn">Get Protected</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="container hero-inner-centered">
+    <div class="hero-text hero-text-centered">
+      <div class="eyebrow center reveal-up in-view">DASHBOARD OVERVIEW</div>
+      <h1 class="hero-title hero-title-centered reveal-up in-view" style="--delay:0.2s">Real-time security operations in one secure view.</h1>
+      <p class="hero-sub hero-sub-centered reveal-up in-view" style="--delay:0.4s">Monitor active threats, infrastructure health, and incident response metrics from a consolidated control center designed for security operations teams.</p>
+      <div class="hero-cta hero-cta-centered reveal-up in-view" style="--delay:0.6s">
+        <a href="404error.html" class="btn btn-primary"><span>Launch Scan</span><i class="arrow">→</i></a>
+        <a href="404error.html" class="btn btn-outline"><span>View Live Feed</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DASHBOARD METRICS ===== -->
+<section class="stats-banner">
+  <div class="container">
+    <div class="stats-banner-grid">
+      <div class="service-card reveal-up in-view" style="--delay:0.1s;">
+        <h3>Threats detected</h3>
+        <p>Current active detections across your monitored environment.</p>
+        <strong style="display:block; margin-top:18px; font-size:2.8rem;">42</strong>
+      </div>
+      <div class="service-card reveal-up in-view" style="--delay:0.2s;">
+        <h3>Response time</h3>
+        <p>Average time to acknowledge and begin remediation.</p>
+        <strong style="display:block; margin-top:18px; font-size:2.8rem;">4m 12s</strong>
+      </div>
+      <div class="service-card reveal-up in-view" style="--delay:0.3s;">
+        <h3>Assets secured</h3>
+        <p>Endpoints, servers, and cloud resources currently protected.</p>
+        <strong style="display:block; margin-top:18px; font-size:2.8rem;">1,248</strong>
+      </div>
+      <div class="service-card reveal-up in-view" style="--delay:0.4s;">
+        <h3>Policy compliance</h3>
+        <p>Coverage rate for active policies and security baselines.</p>
+        <strong style="display:block; margin-top:18px; font-size:2.8rem;">97<span class="stat-suffix">%</span></strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INCIDENTS & ALERTS ===== -->
+<section class="services">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Active incidents</h2>
+      <p class="section-text">Review the most critical incidents and their current status. Prioritize actions, assign ownership, and keep the security posture moving forward.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card reveal-up in-view" style="--delay:0.2s;">
+        <div class="service-icon">!</div>
+        <h3>Malware outbreak</h3>
+        <p>Host quarantine enforced after suspicious process activity was detected on 12 endpoints.</p>
+        <span class="service-link">Investigate<i class="arrow">→</i></span>
+      </article>
+      <article class="service-card reveal-up in-view" style="--delay:0.3s;">
+        <div class="service-icon">⚠</div>
+        <h3>Unauthorized access</h3>
+        <p>Multiple failed logins from foreign IP ranges triggered a security checkpoint in your identity layer.</p>
+        <span class="service-link">Review<i class="arrow">→</i></span>
+      </article>
+      <article class="service-card reveal-up in-view" style="--delay:0.4s;">
+        <div class="service-icon">⏱</div>
+        <h3>Policy drift</h3>
+        <p>3 high-priority assets drifted from compliance rules after the most recent configuration rollout.</p>
+        <span class="service-link">Remediate<i class="arrow">→</i></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUICK ACTIONS ===== -->
+<section class="process">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Quick actions</h2>
+      <p class="section-text">Use the dashboard controls to run scans, deploy mitigations, and export your security summary with one click.</p>
+    </div>
+
+    <div class="process-track">
+      <div class="process-step reveal-up in-view" style="--delay:0.2s;">
+        <div class="process-num">1</div>
+        <h3>Run threat scan</h3>
+        <p>Initiate a full environment scan against the latest threat intelligence signatures.</p>
+      </div>
+      <div class="process-step reveal-up in-view" style="--delay:0.3s;">
+        <div class="process-num">2</div>
+        <h3>Deploy patch</h3>
+        <p>Send patches to prioritized servers and endpoints in a single deployment workflow.</p>
+      </div>
+      <div class="process-step reveal-up in-view" style="--delay:0.4s;">
+        <div class="process-num">3</div>
+        <h3>Block malicious IPs</h3>
+        <p>Update network protections for indicators observed in the latest threat event stream.</p>
+      </div>
+      <div class="process-step reveal-up in-view" style="--delay:0.5s;">
+        <div class="process-num">4</div>
+        <h3>Export report</h3>
+        <p>Download a concise executive summary with risk ratings and response status.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container footer-top-inner">
+      <div class="footer-status">
+        <span class="status-dot"></span>
+        <span class="status-text">ALL SYSTEMS OPERATIONAL</span>
+        <span class="status-sep">/</span>
+        <span class="status-time" id="footerClock">--:--:-- UTC</span>
+      </div>
+
+      <form class="footer-newsletter" id="newsletterForm">
+        <span class="newsletter-label">Get threat alerts in your inbox</span>
+        <div class="newsletter-input-wrap">
+          <input id="newsletterEmail" type="email" placeholder="you@company.com" required>
+          <button type="submit" class="btn btn-primary"><span>Subscribe</span><i class="arrow">→</i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-grid">
+    <div class="footer-col footer-brand">
+      <a href="index.html" class="logo">
+        <img src="logo (1).webp" alt="CyberGuard logo" class="site-logo footer-logo">
+      </a>
+      <p>Proactive cyber defense for businesses that can't afford to be vulnerable. Monitored around the clock, every day of the year.</p>
+
+      <div class="footer-contact-cards">
+        <a href="tel:+18005550142" class="footer-contact-card">
+          <span class="fcc-icon">☎</span>
+          <span><small>Call Us</small><strong>+1 (800) 555‑0142</strong></span>
+        </a>
+        <a href="mailto:contact@cyberguard.com" class="footer-contact-card">
+          <span class="fcc-icon">✉</span>
+          <span><small>Email Us</small><strong>contact@cyberguard.com</strong></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Company <span class="col-bracket">]</span></h4>
+      <ul>
+        <li><a href="dashboard.html"><i class="link-arrow">›</i>Dashboard</a></li>
+        <li><a href="index.html"><i class="link-arrow">›</i>Home</a></li>
+        <li><a href="about.html"><i class="link-arrow">›</i>About</a></li>
+        <li><a href="services.html"><i class="link-arrow">›</i>Services</a></li>
+        <li><a href="process.html"><i class="link-arrow">›</i>Process</a></li>
+        <li><a href="pricing.html"><i class="link-arrow">›</i>Pricing</a></li>
+        <li><a href="team.html"><i class="link-arrow">›</i>Team</a></li>
+        <li><a href="reviews.html"><i class="link-arrow">›</i>Reviews</a></li>
+        <li><a href="blog.html"><i class="link-arrow">›</i>Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Services <span class="col-bracket">]</span></h4>
+      <ul>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Threat Detection</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Penetration Testing</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Cloud Security</a></li>
+        <li><a href="404error.html"><i class="link-arrow">›</i> Incident Response</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4><span class="col-bracket">[</span> Live Scan <span class="col-bracket">]</span></h4>
+      <div class="terminal-window footer-terminal">
+        <div class="terminal-bar">
+          <span class="t-dot t-red"></span><span class="t-dot t-yellow"></span><span class="t-dot t-green"></span>
+          <span class="terminal-title">live_scan.sh</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> <span id="heroTerminalLine">Scanning endpoint activity...</span><span class="cursor">_</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>© 2026 CyberGuard. All rights reserved.</p>
+      <div class="footer-links"><a href="404error.html">Privacy Policy</a><a href="404error.html">Terms of Service</a><a href="404error.html">Security Disclosure</a></div>
+      <div class="footer-socials">
+        <a href="404error.html">in</a><a href="404error.html">𝕏</a><a href="404error.html">f</a><a href="404error.html">@</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -57,22 +57,24 @@
         <a href="404error.html"> <button class="auth-tab" data-tab="2fa-info">2FA Info</button> </a>
       </div>
 
-      <form class="auth-form" id="loginForm">
+      <form class="auth-form" id="loginForm" novalidate>
         <div class="form-field">
           <label for="email">Work Email</label>
           <div class="input-wrap">
             <span class="input-icon">✉</span>
-            <input type="email" id="email" placeholder="you@company.com" required>
+            <input type="email" id="email" placeholder="you@company.com" required aria-describedby="loginEmailError" aria-invalid="false">
           </div>
+          <div class="input-error" id="loginEmailError" aria-live="polite"></div>
         </div>
 
         <div class="form-field">
           <label for="password">Password</label>
           <div class="input-wrap">
             <span class="input-icon">🔒</span>
-            <input type="password" id="password" placeholder="••••••••" required>
+            <input type="password" id="password" placeholder="••••••••" minlength="8" required>
             <button type="button" class="input-toggle" id="togglePassword">SHOW</button>
           </div>
+          <div class="input-error" id="loginPasswordError" aria-live="polite"></div>
           <div class="password-strength" id="passwordStrength">
             <span></span><span></span><span></span><span></span>
           </div>
@@ -138,17 +140,19 @@
       <div class="form-field">
         <label for="createPassword">Password</label>
         <div class="input-wrap">
-          <input type="password" id="createPassword" placeholder="Create a password" required>
+          <input type="password" id="createPassword" placeholder="Create a password" minlength="8" required>
           <button type="button" class="input-toggle modal-toggle" id="createTogglePassword">SHOW</button>
         </div>
+        <div class="input-error" id="createPasswordError" aria-live="polite"></div>
       </div>
 
       <div class="form-field">
         <label for="createPasswordConfirm">Confirm password</label>
         <div class="input-wrap">
-          <input type="password" id="createPasswordConfirm" placeholder="Confirm password" required>
+          <input type="password" id="createPasswordConfirm" placeholder="Confirm password" minlength="8" required>
           <button type="button" class="input-toggle modal-toggle" id="createToggleConfirm">SHOW</button>
         </div>
+        <div class="input-error" id="createPasswordConfirmError" aria-live="polite"></div>
       </div>
 
       <div class="form-row" style="justify-content:flex-end;">
