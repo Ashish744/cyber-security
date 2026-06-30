@@ -177,6 +177,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
 }
 
 .main-nav ul{ display:flex; gap:32px; }
+.main-nav .mobile-nav-cta{ display:none; }
 .nav-link{
   font-size:14.5px; font-weight:500; color:var(--text-dim); position:relative; padding:6px 0;
   transition:color .3s ease;
@@ -819,6 +820,8 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; color
   }
   .main-nav.open{ right:0; }
   .main-nav ul{ flex-direction:column; gap:22px; }
+  .main-nav .mobile-nav-cta{ display:block; margin-top:24px; }
+  .main-nav .mobile-nav-cta .btn{ width:100%; display:inline-flex; justify-content:center; }
   .hamburger{ display:flex; }
   .header-btn{ display:none; }
   .hero-cta{ flex-direction:column; align-items:center; width:100%; }
